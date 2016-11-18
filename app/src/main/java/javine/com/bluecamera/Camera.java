@@ -884,7 +884,7 @@ public class Camera extends NoSearchActivity implements View.OnClickListener,
 
         setContentView(R.layout.camera);
         mSurfaceView = (SurfaceView) findViewById(R.id.camera_preview);
-
+        //更新上次配置信息
         mPreferences = new ComboPreferences(this);
         CameraSettings.upgradeGlobalPreferences(mPreferences.getGlobal());
         mCameraId = CameraSettings.readPreferredCameraId(mPreferences);
@@ -2260,7 +2260,7 @@ class FocusRectangle extends View {
  * from String representation to numeric representation.
  */
 class JpegEncodingQualityMappings {
-    private static final String TAG = "JpegEncodingQualityMappings";
+    private static final String TAG = "JpegEncoQualityMappings";
     private static final int DEFAULT_QUALITY = 85;
     private static HashMap<String, Integer> mHashMap =
             new HashMap<String, Integer>();

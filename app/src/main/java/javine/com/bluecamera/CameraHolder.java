@@ -102,6 +102,10 @@ public class CameraHolder {
         }
     }
 
+    /**
+     * get number of hardware cameras
+     * @return
+     */
     public int getNumberOfCameras() {
         return mNumberOfCameras;
     }

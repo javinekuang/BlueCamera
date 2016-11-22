@@ -65,7 +65,7 @@ class IndicatorBar extends GLView {
     public void overrideSettings(String key, String value) {
         for (int i = 1, n = getComponentCount(); i < n; ++i) {
             AbstractIndicator indicator = (AbstractIndicator) getComponent(i);
-            indicator.overrideSettings(key, value);
+            indicator.overrideSettings(key, value);//如果该indicator不包含此项数据，则不做修改
         }
     }
 

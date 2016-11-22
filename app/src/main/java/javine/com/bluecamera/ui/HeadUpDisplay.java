@@ -180,6 +180,7 @@ public class HeadUpDisplay extends GLView {
 
     public void initialize(Context context, PreferenceGroup preferenceGroup) {
         mPreferenceGroup = preferenceGroup;
+        //该对象在Camera或者VideoCamera中创建。而context就是从上面两个类中的其中一个传递过来的。
         mSharedPrefs = ComboPreferences.get(context);
         mPopupWindow = null;
         clearComponents();
@@ -238,6 +239,7 @@ public class HeadUpDisplay extends GLView {
         }
     }
 
+    //- 重新设定IndicatorBar自动消失的时间
     private void scheduleDeactiviateIndicatorBar() {
         mHandler.removeMessages(DESELECT_INDICATOR);
         mHandler.sendEmptyMessageDelayed(
@@ -371,6 +373,7 @@ public class HeadUpDisplay extends GLView {
         }
     }
 
+    //收起popupWindow和indicatorBar背景消失
     public boolean collapse() {
         // We don't need to synchronize on GLRootView, since both the
         // <code>isActivated()</code> and rendering thread are read-only to

@@ -277,6 +277,11 @@ public class Util {
         return (n & -n) == n;
     }
 
+    /**
+     * 返回与n大小最接近的下一个2的倍数
+     * @param n
+     * @return
+     */
     public static int nextPowerOf2(int n) {
         n -= 1;
         n |= n >>> 16;

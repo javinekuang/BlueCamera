@@ -103,6 +103,12 @@ public class MenuHelper {
             .show();
     }
 
+    /**
+     * 想Menu中添加选项
+     * @param menu
+     * @param switchToVideo
+     * @param r Runnable 点击事件发生时要执行的代码
+     */
     static void addSwitchModeMenuItem(Menu menu, boolean switchToVideo,
             final Runnable r) {
         int labelId = switchToVideo
@@ -162,6 +168,12 @@ public class MenuHelper {
                 ImageManager.INCLUDE_VIDEOS);
     }
 
+    /**
+     * 跳转到系统自带的Gallery应用
+     * @param activity
+     * @param windowTitleId
+     * @param mediaTypes
+     */
     private static void gotoGallery(Activity activity, int windowTitleId,
             int mediaTypes) {
         Uri target = Images.Media.EXTERNAL_CONTENT_URI.buildUpon()
@@ -179,6 +191,10 @@ public class MenuHelper {
         }
     }
 
+    /**
+     * 计算Sdcard剩余容量
+     * @return
+     */
     public static int calculatePicturesRemaining() {
         try {
             if (!ImageManager.hasStorage()) {
